@@ -8,10 +8,20 @@
     :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#8b5cf6;--text:#e6eef8}
     html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071020 0%, #071428 100%);color:var(--text)}
     .container{max-width:900px;margin:48px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    header{display:flex;align-items:center;gap:14px}
+    header{display:flex;align-items:center;gap:14px;justify-content:space-between}
     .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041124}
     h1{margin:0;font-size:1.6rem}
     p.lead{color:var(--muted);margin-top:8px}
+
+    .lang-select {
+      background:#111a2e;
+      color:white;
+      padding:8px 12px;
+      border-radius:8px;
+      border:1px solid #243049;
+      font-size:14px;
+    }
+
     h2{margin-top:22px;color:#dbeafe}
     p{line-height:1.6;color:var(--text)}
     ul{line-height:1.6}
@@ -23,86 +33,172 @@
 </head>
 <body>
   <main class="container" role="main">
+
+    <!-- HEADER + LANGUAGE SWITCHER -->
     <header>
-      <div class="logo" aria-hidden>А</div>
-      <div>
-        <h1>Privacy Policy</h1>
-        <p class="lead">Effective Date: <strong>As published on this page</strong></p>
+      <div style="display:flex; gap:14px; align-items:center;">
+        <div class="logo" aria-hidden>А</div>
+        <div>
+          <h1 id="title"></h1>
+          <p class="lead" id="effective"></p>
+        </div>
       </div>
+
+      <select class="lang-select" id="languageSwitcher">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="pt">PT-BR</option>
+      </select>
     </header>
 
-    <section aria-labelledby="introduction">
-      <h2 id="introduction">Introduction</h2>
-      <p>
-        Arctos медведь is dedicated to crafting immersive gaming experiences that captivate players of all ages. As a leading game studio, we prioritize the privacy and security of our users' personal information. We understand the importance of maintaining confidentiality and trust in our relationship with our players. This Privacy Policy outlines how we responsibly collect, use, share, and protect your personal data to ensure your gaming experience with us is both enjoyable and secure.
-      </p>
+    <section>
+      <h2 id="introTitle"></h2>
+      <p id="introText"></p>
     </section>
 
-    <section aria-labelledby="information-collected">
-      <h2 id="information-collected">Information Collected</h2>
-      <p>
-        We may collect various types of personal information from users, including but not limited to: name, email address, payment information, etc.
-      </p>
+    <section>
+      <h2 id="infoTitle"></h2>
+      <p id="infoText"></p>
     </section>
 
-    <section aria-labelledby="use-of-information">
-      <h2 id="use-of-information">Use of Information</h2>
-      <p>
-        The information collected is used to enhance our services, personalize user experiences, and improve overall customer satisfaction.
-      </p>
+    <section>
+      <h2 id="useTitle"></h2>
+      <p id="useText"></p>
     </section>
 
-    <section aria-labelledby="sharing-of-information">
-      <h2 id="sharing-of-information">Sharing of Information</h2>
-      <p>
-        We may share user information with third parties such as business partners or service providers as necessary to provide our services.
-      </p>
+    <section>
+      <h2 id="shareTitle"></h2>
+      <p id="shareText"></p>
     </section>
 
-    <section aria-labelledby="security">
-      <h2 id="security">Security</h2>
-      <p>
-        We implement security measures to protect user information from unauthorized access or use.
-      </p>
+    <section>
+      <h2 id="securityTitle"></h2>
+      <p id="securityText"></p>
     </section>
 
-    <section aria-labelledby="cookies">
-      <h2 id="cookies">Cookies and Similar Technologies</h2>
-      <p>
-        We use cookies and similar tracking technologies on our website or app to enhance user experience and provide targeted advertisements. Users can manage cookie preferences through their browser settings.
-      </p>
+    <section>
+      <h2 id="cookiesTitle"></h2>
+      <p id="cookiesText"></p>
     </section>
 
-    <section aria-labelledby="user-rights">
-      <h2 id="user-rights">User Rights</h2>
-      <p>
-        Users have the right to access, correct, update, or delete their personal information as permitted by law.
-      </p>
+    <section>
+      <h2 id="rightsTitle"></h2>
+      <p id="rightsText"></p>
     </section>
 
-    <section aria-labelledby="changes">
-      <h2 id="changes">Changes to Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy periodically. Users will be notified of any changes by posting the revised policy on our website.
-      </p>
+    <section>
+      <h2 id="changesTitle"></h2>
+      <p id="changesText"></p>
     </section>
 
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contact Us</h2>
-      <p>
-        For questions or inquiries regarding this Privacy Policy, please contact us at <a href="mailto:arctosent@icloud.com">arctosent@icloud.com</a>.
+    <section>
+      <h2 id="contactTitle"></h2>
+      <p id="contactText"></p>
+      <p class="meta">
+        Example URL:
+        <a class="url" href="https://www.arctosbrasil.com.br/privacy-policy" target="_blank">
+          www.arctosbrasil.com.br/privacy-policy
+        </a>
       </p>
-      <p class="meta">Example URL: <a class="url" href="https://www.arctosbrasil.com.br/privacy-policy" target="_blank" rel="noopener">www.arctosbrasil.com.br/privacy-policy</a></p>
     </section>
 
     <footer>
-      <p>© <span id="year"></span> Arctos медведь. All rights reserved.</p>
+      <p id="footer"></p>
     </footer>
+
   </main>
 
   <script>
-    // set current year automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const translations = {
+      en: {
+        title: "Privacy Policy",
+        effective: "Effective Date: As published on this page",
+        introTitle: "Introduction",
+        introText: "Arctos медведь is dedicated to crafting immersive gaming experiences... (same text)",
+        infoTitle: "Information Collected",
+        infoText: "We may collect various types of personal information...",
+        useTitle: "Use of Information",
+        useText: "The information collected is used to enhance our services...",
+        shareTitle: "Sharing of Information",
+        shareText: "We may share user information with third parties...",
+        securityTitle: "Security",
+        securityText: "We implement security measures to protect user information...",
+        cookiesTitle: "Cookies and Similar Technologies",
+        cookiesText: "We use cookies and similar tracking technologies...",
+        rightsTitle: "User Rights",
+        rightsText: "Users have the right to access, correct, update...",
+        changesTitle: "Changes to Privacy Policy",
+        changesText: "We may update this Privacy Policy periodically...",
+        contactTitle: "Contact Us",
+        contactText: "For questions, contact us at arctosent@icloud.com.",
+        footer: `© ${new Date().getFullYear()} Arctos медведь. All rights reserved.`
+      },
+
+      ru: {
+        title: "Политика конфиденциальности",
+        effective: "Дата вступления в силу: как указано на этой странице",
+        introTitle: "Введение",
+        introText: "Arctos медведь стремится создавать захватывающие игровые миры... (перевод)",
+        infoTitle: "Собираемая информация",
+        infoText: "Мы можем собирать различную персональную информацию...",
+        useTitle: "Использование информации",
+        useText: "Собранная информация используется для улучшения наших услуг...",
+        shareTitle: "Передача информации",
+        shareText: "Мы можем передавать данные третьим сторонам...",
+        securityTitle: "Безопасность",
+        securityText: "Мы применяем меры безопасности для защиты персональных данных...",
+        cookiesTitle: "Cookies и похожие технологии",
+        cookiesText: "Мы используем cookies и подобные технологии...",
+        rightsTitle: "Права пользователей",
+        rightsText: "Пользователи имеют право запрашивать, обновлять, удалять свои данные...",
+        changesTitle: "Изменения политики конфиденциальности",
+        changesText: "Мы можем периодически обновлять эту политику...",
+        contactTitle: "Связаться с нами",
+        contactText: "По вопросам свяжитесь с нами: arctosent@icloud.com.",
+        footer: `© ${new Date().getFullYear()} Arctos медведь. Все права защищены.`
+      },
+
+      pt: {
+        title: "Política de Privacidade",
+        effective: "Data de Vigência: Conforme publicado nesta página",
+        introTitle: "Introdução",
+        introText: "A Arctos медведь é dedicada a criar experiências imersivas... (tradução)",
+        infoTitle: "Informações Coletadas",
+        infoText: "Podemos coletar diversos tipos de informações pessoais...",
+        useTitle: "Uso das Informações",
+        useText: "As informações coletadas são usadas para melhorar nossos serviços...",
+        shareTitle: "Compartilhamento de Informações",
+        shareText: "Podemos compartilhar dados com parceiros ou prestadores de serviços...",
+        securityTitle: "Segurança",
+        securityText: "Implementamos medidas de segurança para proteger os dados...",
+        cookiesTitle: "Cookies e Tecnologias Semelhantes",
+        cookiesText: "Usamos cookies para melhorar a experiência do usuário...",
+        rightsTitle: "Direitos dos Usuários",
+        rightsText: "Os usuários têm direito de acessar, corrigir ou excluir seus dados...",
+        changesTitle: "Alterações na Política de Privacidade",
+        changesText: "Podemos atualizar esta política periodicamente...",
+        contactTitle: "Fale Conosco",
+        contactText: "Para dúvidas, entre em contato: arctosent@icloud.com.",
+        footer: `© ${new Date().getFullYear()} Arctos медведь. Todos os direitos reservados.`
+      }
+    };
+
+    function updateLanguage(lang) {
+      const t = translations[lang];
+
+      for (const key in t) {
+        const el = document.getElementById(key);
+        if (el) el.innerHTML = t[key];
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.getElementById("languageSwitcher").addEventListener("change", (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    updateLanguage("en");
   </script>
 </body>
 </html>
