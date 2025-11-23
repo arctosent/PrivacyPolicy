@@ -6,30 +6,77 @@
   <title>Privacy Policy — Arctos медведь Entertainment</title>
 
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#8b5cf6;--text:#e6eef8}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#071020 0%, #071428 100%);color:var(--text)}
-    .container{max-width:900px;margin:48px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    header{display:flex;align-items:center;gap:14px;justify-content:space-between}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041124}
+    :root{
+      --bg1:#2a0004;
+      --bg2:#4a0008;
+      --card:#1a0003;
+      --muted:#d7a6a6;
+      --accent:#ff4d57;
+      --text:#ffecec;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      color:var(--text);
+    }
+
+    .container{
+      max-width:900px;
+      margin:48px auto;
+      padding:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      justify-content:space-between;
+    }
+
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#000;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
     h1{margin:0;font-size:1.6rem}
     p.lead{color:var(--muted);margin-top:8px}
 
-    .lang-select {
-      background:#111a2e;
+    .lang-select{
+      background:#2a0004;
       color:white;
       padding:8px 12px;
       border-radius:8px;
-      border:1px solid #243049;
+      border:1px solid #5a1218;
       font-size:14px;
     }
 
-    h2{margin-top:22px;color:#dbeafe}
+    h2{margin-top:22px;color:#ffdada}
     p{line-height:1.6;color:var(--text)}
-    ul{line-height:1.6}
     .meta{margin-top:18px;font-size:0.95rem;color:var(--muted)}
     a.url{color:var(--accent);text-decoration:none}
     footer{margin-top:28px;color:var(--muted);font-size:0.9rem}
-    @media(max-width:640px){.container{margin:20px;padding:18px}}
+
+    @media(max-width:640px){
+      .container{margin:20px;padding:18px}
+    }
   </style>
 </head>
 
@@ -39,7 +86,12 @@
     <!-- HEADER + LANGUAGE SWITCHER -->
     <header>
       <div style="display:flex; gap:14px; align-items:center;">
-        <div class="logo" aria-hidden>А</div>
+        
+        <!-- LOGO REAL -->
+        <div class="logo">
+          <img src="https://pbs.twimg.com/profile_images/1989458808532320256/apE9d3wm_400x400.jpg" alt="Arctos Logo">
+        </div>
+
         <div>
           <h1 id="title"></h1>
           <p class="lead" id="effective"></p>
@@ -117,7 +169,7 @@
 
         introTitle: "Introduction",
         introText:
-          "Arctos медведь Entertainment is dedicated to crafting immersive gaming experiences that captivate players of all ages. As a game studio, we prioritize the privacy and security of our users' personal information.",
+          "Arctos медведь Entertainment is dedicated to crafting immersive gaming experiences that captivate players of all ages.",
 
         infoTitle: "Information Collected",
         infoText: "We may collect various types of personal information...",
@@ -152,7 +204,7 @@
 
         introTitle: "Введение",
         introText:
-          "Arctos медведь Entertainment стремится создавать захватывающие игровые миры для игроков всех возрастов. Мы уделяем особое внимание защите персональных данных наших пользователей.",
+          "Arctos медведь Entertainment стремится создавать захватывающие игровые миры для всех возрастов.",
 
         infoTitle: "Собираемая информация",
         infoText: "Мы можем собирать различные виды персональной информации...",
@@ -170,7 +222,7 @@
         cookiesText: "Мы используем cookies и подобные технологии...",
 
         rightsTitle: "Права пользователей",
-        rightsText: "Пользователи имеют право получать, обновлять или удалять свои данные...",
+        rightsText: "Пользователи могут получать, обновлять или удалять свои данные...",
 
         changesTitle: "Изменения политики",
         changesText: "Политика может периодически обновляться...",
@@ -187,25 +239,25 @@
 
         introTitle: "Introdução",
         introText:
-          "A Arctos медведь Entertainment é dedicada a criar experiências de jogo imersivas que encantam jogadores de todas as idades. Valorizamos profundamente a privacidade e a segurança dos dados pessoais dos nossos usuários.",
+          "A Arctos медведь Entertainment cria experiências imersivas que encantam jogadores de todas as idades.",
 
         infoTitle: "Informações Coletadas",
         infoText: "Podemos coletar diversos tipos de informações pessoais...",
 
         useTitle: "Uso das Informações",
-        useText: "As informações coletadas são utilizadas para aprimorar nossos serviços...",
+        useText: "As informações coletadas ajudam a melhorar nossos serviços...",
 
         shareTitle: "Compartilhamento de Informações",
-        shareText: "Podemos compartilhar informações com parceiros e fornecedores...",
+        shareText: "Podemos compartilhar dados com parceiros e fornecedores...",
 
         securityTitle: "Segurança",
-        securityText: "Aplicamos medidas de segurança avançadas...",
+        securityText: "Aplicamos medidas avançadas de proteção aos dados...",
 
         cookiesTitle: "Cookies e Tecnologias Semelhantes",
-        cookiesText: "Utilizamos cookies e tecnologias de rastreamento...",
+        cookiesText: "Utilizamos cookies para melhorar sua experiência...",
 
         rightsTitle: "Direitos dos Usuários",
-        rightsText: "Os usuários têm direito de acessar, atualizar ou excluir seus dados...",
+        rightsText: "Você pode acessar, atualizar ou excluir seus dados...",
 
         changesTitle: "Alterações na Política",
         changesText: "Podemos atualizar esta política periodicamente...",
